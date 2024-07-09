@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        اهلا بك يا 
+        {% if request.cookies.get("user") %}
+             {% if "fas9" in  request.cookies.get("user") %}
+                ايها الفاسق 
+             {% endif %}
+             {% if "islam" in  request.cookies.get("user") %}
+                ايها المؤمن
+             {% endif %}
+        {% else %}
+            ايها الزائر الجديد
+        {% endif %}
+    </h1>
+</body>
+</html>
